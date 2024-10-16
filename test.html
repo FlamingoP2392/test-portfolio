@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="test.css">
+        <title>test responsive</title>
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <div class="nav-con">
+                    <div class="logo" onclick="menuExpand()">
+                        <a href="#">My Protfolio</a>
+                    </div>
+                    <ul class="menu" id="nav-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Working</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <h5>นิษฐ์อานัณย์ ทิพนงค์</h5>
+            <p>ยินดีต้อนรับทุกคนเข้าสู่ Portfolio ของผมครับ เว็บไซต์นี้จัดทำขึ้นเพื่อฝึกฝนการสร้างเว็บไซต์ ด้วย HTML CSS Javascript และรวบรวมประวัติส่วนตัว ผลงาน กิจกรรมต่างๆ ที่ผมมี ผ่านการเรียนรู้สิ่งต่างๆ ที่ผ่านมา ขอบคุณทุกคนที่เข้ามารับชมครับ</p><hr>
+            <img src="profile3.png">
+        </main>
+
+        <aside>
+
+        </aside>
+    </body>
+    <script>
+        const menuExpand = () => {
+          const menuList = document.getElementById("nav-menu");
+          console.log(menuList.className);
+          if (menuList.className === "menu") {
+            menuList.className += " menu-display";
+          } else {
+            menuList.className = "menu";
+          }
+        };
+    </script>
+</html>
