@@ -1,51 +1,112 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="test.css">
-        <title>test responsive</title>
-    </head>
-    <body>
-        <nav>
-            <div class="container">
-                <div class="nav-con">
-                    <div class="logo" onclick="menuExpand()">
-                        <a href="#">My Protfolio</a>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
+    <title>test responsive</title>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-con">
+                <div class="logo" onclick="menuExpand()">
+                    <a href="#">My Protfolio</a>
+                </div>
+                <ul class="menu" id="nav-menu">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Working">Working</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="Home">
+        <main class="home-content">
+            <div class="home-into">
+                <h3>นิษฐ์อานัณย์ ทิพนงค์</h3>
+                <p>ยินดีต้อนรับทุกคนเข้าสู่ Portfolio ของผมครับ เว็บไซต์นี้จัดทำขึ้นเพื่อฝึกฝนการสร้างเว็บไซต์ ด้วย HTML
+                    CSS
+                    Javascript และรวบรวมประวัติส่วนตัว ผลงาน กิจกรรมต่างๆ ที่ผมมี ผ่านการเรียนรู้สิ่งต่างๆ ที่ผ่านมา
+                    ขอบคุณทุกคนที่เข้ามารับชมครับ</p>
+                <hr>
+            </div>
+            <div class="home-image">
+                <img src="image/profile3.png">
+            </div>
+        </main>
+    </section>
+
+    <h5>Working</h5>
+    <section id="Working">
+        <main class="working-content">
+            <div class="working-academic">
+                <div class="card">
+                    <img src="#">
+                    <div class="card__content">
+                        <p class="card__title">Card Title 1</p>
+                        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
-                    <ul class="menu" id="nav-menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Working</a></li>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                </div>
+    
+                <div class="card">
+                    <img src="#">
+                    <div class="card__content">
+                        <p class="card__title">Card Title 2</p>
+                        <p class="card__description">Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="#">
+                    <div class="card__content">
+                        <p class="card__title">Card Title 3</p>
+                        <p class="card__description">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
                 </div>
             </div>
-        </nav>
-
-        <main>
-            <h5>นิษฐ์อานัณย์ ทิพนงค์</h5>
-            <p>ยินดีต้อนรับทุกคนเข้าสู่ Portfolio ของผมครับ เว็บไซต์นี้จัดทำขึ้นเพื่อฝึกฝนการสร้างเว็บไซต์ ด้วย HTML CSS Javascript และรวบรวมประวัติส่วนตัว ผลงาน กิจกรรมต่างๆ ที่ผมมี ผ่านการเรียนรู้สิ่งต่างๆ ที่ผ่านมา ขอบคุณทุกคนที่เข้ามารับชมครับ</p><hr>
-            <img src="profile3.png">
         </main>
+    </section>
+    
 
-        <aside>
+</body>
+<script>
+    // เมื่อโหลดหน้าเว็บเสร็จ
+    window.addEventListener('load', () => {
+        document.body.classList.add('visible');
+    });
 
-        </aside>
-    </body>
-    <script>
-        const menuExpand = () => {
-          const menuList = document.getElementById("nav-menu");
-          console.log(menuList.className);
-          if (menuList.className === "menu") {
+
+    //เปิดแถบเมนูสำหรับ Responsive
+    const menuExpand = () => {
+        const menuList = document.getElementById("nav-menu");
+        if (menuList.className === "menu") {
             menuList.className += " menu-display";
-          } else {
+        } else {
             menuList.className = "menu";
-          }
-        };
-    </script>
+        }
+    };
+
+    // ปิดเมนูเมื่อคลิกส่วนว่าง
+    document.addEventListener("click", (event) => {
+        const menuList = document.getElementById("nav-menu");
+        const logo = document.querySelector(".logo");
+
+        // เช็คว่าคลิกที่เมนูหรือโลโก้หรือไม่
+        if (!menuList.contains(event.target) && !logo.contains(event.target)) {
+            menuList.className = "menu"; // ปิดเมนู
+        }
+    });
+</script>
+
 </html>
