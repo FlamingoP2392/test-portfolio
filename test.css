@@ -1,286 +1,506 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Prompt;
-    box-sizing: border-box;
-    background-color: #f4fbff;
-    padding-top: 60px;
-    opacity: 0; /* ซ่อนเนื้อหาในตอนแรก */
-    transform: translateY(20px); /* เลื่อนเนื้อหาเล็กน้อยลง */
-    transition: opacity 1s ease, transform 3s ease; /* ตั้งค่าการเปลี่ยนแปลง */
+  margin: 0;
+  padding: 0;
+  font-family: Prompt;
+  box-sizing: border-box;
+  background-color: #f4fbff;
+  padding-top: 60px;
+  opacity: 0; /* ซ่อนเนื้อหาในตอนแรก */
+  transform: translateY(20px); /* เลื่อนเนื้อหาเล็กน้อยลง */
+  transition: opacity 1s ease, transform 3s ease; /* ตั้งค่าการเปลี่ยนแปลง */
 }
 
 body.visible {
-    opacity: 1; /* แสดงเนื้อหา */
-    transform: translateY(0); /* คืนค่าการเลื่อน */
+  opacity: 1; /* แสดงเนื้อหา */
+  transform: translateY(0); /* คืนค่าการเลื่อน */
 }
 
 .container {
-    max-width: 80vw;
-    margin: 0 auto;
+  max-width: 80vw;
+  margin: 0 auto;
 }
 
 .logo a {
-    font-size: 1.5rem;
-    font-weight: bolder;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
 nav {
-    background-color: #008956;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  background-color: #008956;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .nav-con {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
 }
 
 .nav-con a {
-    color: #f4fbff;
-    text-decoration: none;
+  color: #f4fbff;
+  text-decoration: none;
 }
 
 .menu {
-    display: flex;
+  display: flex;
 }
 
 .menu li {
-    list-style: none;
-    margin-left: 2rem;
-    cursor: pointer;
+  list-style: none;
+  margin-left: 2rem;
+  cursor: pointer;
 }
 
 .menu li a {
-    color: #f4fbff;
+  color: #f4fbff;
 }
 
 .menu li a:hover {
-    color: black;
-    text-decoration: underline solid 1px #008956;
+  color: black;
+  text-decoration: underline solid 1px #008956;
 }
 
 h3 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: #008956;
-    margin: 7.5%;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #008956;
+  margin: 7.5%;
 }
 
 h5 {
-    font-size: 2rem;
-    text-align: center;
-    color: #008956;
-    margin: 7%;
-    text-decoration: underline 3px #47c088;
-    ;
+  font-size: 2rem;
+  text-align: center;
+  color: #008956;
+  text-decoration: underline 3px #47c088;
+}
+h6 {
+  font-size: 1rem;
+  text-align: center;
+  color: #47c088;
+  box-sizing: border-box;
+}
+h6#sop {
+  font-size: 1.5rem;
+  text-align: center;
+  align-items: center;
+  color: #035715;
+  box-sizing: border-box;
 }
 
 p {
-    font-size: 18px;
-    text-indent: 5%;
-    color: #47c088;
-    box-sizing: border-box;
-    margin-left: 3%;
-    margin-right: 3%;
+  font-size: 18px;
+  text-indent: 5%;
+  color: #008956;
+  box-sizing: border-box;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+p#sop {
+  font-size: 18px;
+  text-align: center;
+  align-items: center;
+  color: #015c16;
+  box-sizing: border-box;
 }
 
+img#profile {
+  margin: 0 auto;
+  width: 70%;
+  display: block;
+  margin-bottom: 10%;
+}
 img {
-    margin: 0 auto;
-    width: 70%;
-    display: block;
-    margin-bottom: 10%;
+  width: 95%;
+  margin: 0 auto;
+  padding: 2px;
 }
 
 hr {
-    border: 1px solid #008956;
-    width: 80%;
+  border: 1px solid #008956;
+  width: 80%;
 }
 
 .working-content {
-    width: 100%;
+  width: 100%;
 }
 .working-academic {
-    display: flex;
-    flex-direction: column; /* เรียงแบบคอลัมน์ */
-    align-items: center; /* จัดให้อยู่กลาง */
-    gap: 20px; /* ระยะห่างระหว่างคาร์ด */
+  display: flex;
+  flex-direction: column; /* เรียงแบบคอลัมน์ */
+  align-items: center; /* จัดให้อยู่กลาง */
+  gap: 20px; /* ระยะห่างระหว่างคาร์ด */
 }
 
 /* From Uiverse.io by gharsh11032000 */
 .card {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    background-color: #008956;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    perspective: 1000px;
-    box-shadow: 0 0 0 5px #ffffff80;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  width: 300px;
+  height: 180px;
+  background-color: #008956;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
 
 .card__content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #9effb6;
-    transform: rotateX(-90deg);
-    transform-origin: bottom;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #9effb6;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card:hover .card__content {
-    transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
 
 .card__title {
-    margin: 0;
-    font-size: 24px;
-    color: #333;
-    font-weight: 700;
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
 }
 
 .card:hover svg {
-    scale: 0;
+  scale: 0;
 }
 
 .card__description {
-    margin: 10px 0 0;
-    font-size: 14px;
-    color: #777;
-    line-height: 1.4;
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
 }
 
+.sop {
+  background-color: #47c088;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: inherit;
+  padding: 2px;
+  margin: 0 auto;
+}
+
+.btn-content {
+  display: grid;
+  place-items: center; /* จัดให้อยู่กึ่งกลางทั้งแนวนอนและแนวตั้ง */
+}
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: #c5ffe4;
+  border: 3px solid #008956;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #008956;
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  transform: translateX(0);
+}
 
 @media (max-width: 710px) {
-    .logo {
-        padding: 1rem 0;
-        width: 100%;
-        text-align: center;
-    }
+  .logo {
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
 
-    .logo a {
-        font-size: 1.5rem;
-        text-decoration: none;
-        pointer-events: none;
-    }
+  .logo a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    pointer-events: none;
+  }
 
-    .nav-con {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .nav-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .menu {
-        border-top: 1px solid black;
-        display: none;
-        flex-direction: column;
-        list-style: none;
-        align-items: center;
-        margin-bottom: 0px;
-        width: 100%;
-        background-color: #47c088;
-    }
+  .menu {
+    border-top: 1px solid black;
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: #47c088;
+  }
 
-    .menu-display {
-        display: flex;
-        position: fixed;
-        margin: 65px;
-    }
+  .menu-display {
+    display: flex;
+    position: fixed;
+    margin: 65px;
+  }
 
-    .menu li {
-        margin: 1rem 0;
-        width: 100%;
-    }
+  .menu li {
+    margin: 1rem 0;
+    width: 100%;
+  }
 
-    .menu li a {
-        display: block;
-        width: 100%;
-        font-size: 1rem;
-        text-decoration: none;
-    }
+  .menu li a {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    text-decoration: none;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 710px) {
-    .nav-con {
-        height: inherit;
-    }
+  .nav-con {
+    height: inherit;
+  }
 
-    .logo {
-        padding: 1rem;
-    }
+  .logo {
+    padding: 1rem;
+  }
 
-    .logo a {
-        font-size: 2rem;
-    }
+  .logo a {
+    font-size: 2rem;
+  }
 
-    .menu li a {
-        font-size: 1.3rem;
-    }
+  .menu li a {
+    font-size: 1.3rem;
+  }
 
-    /*content*/
-    h3 {
-        font-size: 3rem;
-    }
+  /*content*/
+  h3 {
+    font-size: 3rem;
+  }
 
-    p {
-        font-size: 20px;
-    }
+  p {
+    font-size: 20px;
+  }
 }
 
-@media (min-width: 820px) {
-    .home-content {
-        display: flex;
-        /* ใช้ Flexbox สำหรับจัดเรียง */
-        justify-content: space-between;
-        /* เว้นระยะห่างระหว่างสองคอลัมน์ */
-        align-items: center;
-        /* จัดแนวให้ตรงกลางในแนวตั้ง */
-        padding: 0 2rem;
-        /* เพิ่ม padding ตามต้องการ */
-    }
+@media (min-width: 711px) {
+  .nav-con {
+    height: inherit;
+  }
+  .logo a {
+    font-size: 1.5rem;
+  }
+  .menu li a {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
 
-    .home-into {
-        flex: 1;
-        /* ให้พื้นที่กับคอลัมน์นี้ */
-        max-width: 50%;
-        align-items: center;
-        text-align: center;
-    }
+  p {
+    font-size: 22px;
+  }
+  .working-academic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+}
 
-    .home-image {
-        flex: 1;
-        /* ให้พื้นที่กับคอลัมน์นี้ */
-        max-width: 50%;
-        /* จำกัดความกว้างไม่ให้เกิน 50% */
-        display: flex;
-        /* เพื่อให้รูปภาพอยู่กลาง */
-        justify-content: center;
-        /* จัดกึ่งกลางในแนวนอน */
-    }
+@media (min-width: 820px) and (max-width: 1023px) {
+  .home-content {
+    display: flex;
+    /* ใช้ Flexbox สำหรับจัดเรียง */
+    justify-content: space-between;
+    /* เว้นระยะห่างระหว่างสองคอลัมน์ */
+    align-items: center;
+    /* จัดแนวให้ตรงกลางในแนวตั้ง */
+    padding: 0 2rem;
+  }
 
-    .home-image img {
-        width: 80%;
-        /* ปรับขนาดภาพให้เหมาะสม */
-        height: auto;
-        /* ทำให้สูงอัตโนมัติ */
-    }
+  .home-into {
+    flex: 1;
+    max-width: 58%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-image {
+    flex: 1;
+    max-width: 42%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .home-image img {
+    width: 80%;
+    height: auto;
+  }
+  .working-academic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+  .nav-con {
+    height: inherit;
+  }
+  .logo a {
+    font-size: 1.8rem;
+  }
+  .menu li a {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 2.6rem;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  .card {
+    width: 350px;
+    height: 230px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .nav-con {
+    height: inherit;
+  }
+  .logo a {
+    font-size: 2rem;
+  }
+  .menu li a {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  .home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .home-into {
+    flex: 1;
+    max-width: 50%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .home-image img {
+    width: 80%;
+    height: auto;
+  }
+  .working-academic {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1240px) {
+  .nav-con {
+    height: inherit;
+  }
+  .logo a {
+    font-size: 2rem;
+  }
+  .menu li a {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  .home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .home-into {
+    flex: 1;
+    max-width: 50%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .home-image img {
+    width: 80%;
+    height: auto;
+  }
+  .working-academic {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+  .card {
+    width: 370px;
+    height: 250px;
+  }
 }
