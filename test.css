@@ -8,6 +8,7 @@ body {
   opacity: 0; /* ซ่อนเนื้อหาในตอนแรก */
   transform: translateY(20px); /* เลื่อนเนื้อหาเล็กน้อยลง */
   transition: opacity 1s ease, transform 3s ease; /* ตั้งค่าการเปลี่ยนแปลง */
+  scroll-behavior: smooth;
 }
 
 body.visible {
@@ -201,10 +202,17 @@ hr {
   margin: 0 auto;
 }
 
+
 .btn-content {
   display: grid;
-  place-items: center; /* จัดให้อยู่กึ่งกลางทั้งแนวนอนและแนวตั้ง */
+  place-items: center; 
 }
+.btn-content a{
+  text-decoration: none;
+  list-style: none;
+  color:#9effb6;
+}
+
 .btn {
   display: inline-block;
   padding: 0.9rem 1.8rem;
@@ -238,6 +246,7 @@ hr {
 .btn:hover::before {
   transform: translateX(0);
 }
+
 
 @media (max-width: 710px) {
   .logo {

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="resume.css" />
+    <title>my-resume</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="container">
+        <div class="nav-con">
+          <div class="logo" onclick="menuExpand()">
+            <a href="test.html">My Protfolio</a>
+          </div>
+          <ul class="menu" id="nav-menu">
+            <li><a href="test.html">Back</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="main-content">
+      <div class="resume-con">
+      <div class="home-into">
+        <h3>RESUME</h3>
+        <p>ชื่อ : นายนิษฐ์อานัณย์ ทิพนงค์<br> ชื่อเล่น : ปุ๊บปั๊บ<br>
+        วัน/เดือน/ปีเกิด : 16 พฤศจิกายน 2547 <br>อายุ : 19 ปี</p>
+      </div>
+
+      <div class="home-into2">
+        <h5>Hard Skills</h5>
+        <p>- เขียนเว็บไซต์ HTML CSS Javascript 
+          <br>- ซ่อมแซมครื่อปริ้นเตอร์เบื้องต้น 
+          <br>- โปรแกรมภาษา C เบื้องต้น 
+          <br>- พัฒนาโปรแกรมบอร์ด ผ่านทาง Arduino IDE</p>
+      </div>
+      <div class="home-into">
+        <h5>Soft Skills</h5>
+        <p>- การปรับตัวได้ดี 
+          <br>- ชอบที่จะเรียนรู้สิ่งใหม่ ๆ 
+          <br>- ประเมินสถานการณ์ได้ดี 
+          <br>- มีทักษะบริหารเงินและเวลา 
+          <br>- มีความรับผิดชอบต่อตนเองและผู้อื่น</p>
+      </div>
+
+      <div class="home-into2">
+        <h5>Educations</h5>
+        <p><b>ประถมศึกษา :</b> โรงเรียนวัดห้วยแห้ง<br><b>มัธยมศึกษาตอนต้น :</b> โรงเรียนวัดห้วยแห้ง<br><b>ระดับประกาศนียบัตรวิชาชีพ
+          และประกาศนียบัตรวิชาชีพชั้นสูง :</b> <br>สาขาวิชาเทคโนโลยีสารสนเทศ วิทยาลัยชุมชนอุทัยธานี</p>
+      </div>
+
+      <div class="home-into">
+        <h5>Experience</h5>
+        <p><b>2565 : </b>นักศึกษาฝึกงาน ตำแหน่งพนักงานราชการทั่วไป <br>ณ ที่ว่าการอำเภอบ้านไร่
+        <br><b>2567 : </b>นักศึกษาฝึกงาน ตำแหน่งช่างซ่อมคอมพิวเตอร์ <br>ณ บริษัทแอดไวซ์ บ้านไร่ จำกัด</p>
+      </div>
+
+      <div class="home-into2">
+        <h5>Hobbies</h5>
+        <p>- อ่านหนังสือ 
+          <br>- เล่นกีฬา 
+          <br>- ทำอาหาร
+          <br>- ฝึกเขียนโค้ด 
+          <br>- ทำอนิเมชั่น 2D 
+          <br>- ดูอนิเมะ</p>
+      </div>
+
+
+    </div>
+</div>
+
+    <script>
+      // เมื่อโหลดหน้าเว็บเสร็จ
+      window.addEventListener("load", () => {
+        document.body.classList.add("visible");
+      });
+  
+      //เปิดแถบเมนูสำหรับ Responsive
+      const menuExpand = () => {
+        const menuList = document.getElementById("nav-menu");
+        if (menuList.className === "menu") {
+          menuList.className += " menu-display";
+        } else {
+          menuList.className = "menu";
+        }
+      };
+  
+      // ปิดเมนูเมื่อคลิกส่วนว่าง
+      document.addEventListener("click", (event) => {
+        const menuList = document.getElementById("nav-menu");
+        const logo = document.querySelector(".logo");
+  
+        // เช็คว่าคลิกที่เมนูหรือโลโก้หรือไม่
+        if (!menuList.contains(event.target) && !logo.contains(event.target)) {
+          menuList.className = "menu"; // ปิดเมนู
+        }
+      });
+      </script>
+  </body>
+</html>

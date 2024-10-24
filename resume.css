@@ -1,0 +1,543 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Prompt;
+}
+
+body {
+  background-color: #f4fbff;
+  padding-top: 60px;
+  opacity: 0; /* ซ่อนเนื้อหาในตอนแรก */
+  transform: translateY(20px); /* เลื่อนเนื้อหาเล็กน้อยลง */
+  transition: opacity 1s ease, transform 3s ease; /* ตั้งค่าการเปลี่ยนแปลง */
+  scroll-behavior: smooth;
+}
+
+body.visible {
+  opacity: 1; /* แสดงเนื้อหา */
+  transform: translateY(0); /* คืนค่าการเลื่อน */
+}
+
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+nav {
+  background-color: #008956;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+
+.nav-con a {
+  color: #f4fbff;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  list-style: none;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.menu li a {
+  color: #f4fbff;
+}
+
+.menu li a:hover {
+  color: black;
+  text-decoration: underline solid 1px #008956;
+}
+
+h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #008956;
+  margin: 2%;
+}
+
+h5 {
+  font-size: 2rem;
+  text-align: center;
+  color: #008956;
+  text-decoration: underline 3px #47c088;
+}
+h6 {
+  font-size: 1rem;
+  text-align: center;
+  color: #47c088;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 18px;
+  color: #008956;
+  box-sizing: border-box;
+}
+
+hr {
+  border: 1px solid #008956;
+  width: 80%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.main-content {
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  display: flexbox;
+  justify-content: space-between;
+  padding: 0.2rem;
+}
+
+.home-into {
+  flex: 1;
+  max-width: 50%;
+  align-items: baseline;
+  text-align: start;
+  margin: 5rem 2rem;
+  box-sizing: border-box;
+}
+
+.home-into2 {
+  flex: 1;
+  max-width: 50%;
+  align-items: baseline;
+  text-align: start;
+  margin: 5rem 2rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    display: flex;
+    justify-content: center; /* จัดตรงกลาง */
+    padding: 2rem;
+  }
+
+  .resume-con {
+    display: flex;
+    flex-wrap: wrap; /* ทำให้คอนเทนต์แสดงในหลายแถว */
+    justify-content: center; /* แบ่งคอนเทนต์ซ้ายขวาและจัดตรงกลาง */
+    align-items: center; /* จัดคอนเทนต์ให้แนวตั้งอยู่ตรงกลาง */
+    width: 100%; /* ให้ครอบคลุมความกว้างทั้งหมด */
+  }
+
+  .home-into,
+  .home-into2 {
+    flex-basis: 90%; /* แต่ละคอนเทนต์ใช้พื้นที่ 48% ของความกว้าง */
+    max-width: 90%; /* จำกัดความกว้างสูงสุดไม่เกิน 48% */
+    margin: 1rem; /* เพิ่มระยะห่างระหว่างคอนเทนต์ */
+    text-align: left; /* จัดข้อความชิดซ้ายในแต่ละบรรทัด */
+
+    /* จัดกล่องเนื้อหาให้อยู่ตรงกลางแนวนอน */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดกลุ่มตัวอักษรให้อยู่กึ่งกลาง */
+  }
+
+  hr {
+    width: 100%; /* ให้เส้น hr ครอบคลุมพื้นที่เต็ม */
+    margin: 2rem 0; /* เพิ่มระยะห่างจากคอนเทนต์ */
+  }
+}
+
+@media (max-width: 710px) {
+  .logo {
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo a {
+    font-size: 2rem;
+    text-decoration: none;
+    pointer-events: none;
+  }
+
+  .nav-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    border-top: 1px solid black;
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: #47c088;
+  }
+
+  .menu-display {
+    display: flex;
+    position: fixed;
+    margin: 65px;
+  }
+
+  .menu li {
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .menu li a {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 710px) {
+  .nav-con {
+    height: inherit;
+  }
+
+  .logo {
+    padding: 1rem;
+  }
+
+  .logo a {
+    font-size: 2rem;
+  }
+
+  .menu li a {
+    font-size: 1.3rem;
+  }
+
+  /*content*/
+  h3 {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  .main-content {
+    display: flex;
+    justify-content: center; /* จัดตรงกลาง */
+    padding: 2rem;
+  }
+
+  .resume-con {
+    display: flex;
+    flex-wrap: wrap; /* ทำให้คอนเทนต์แสดงในหลายแถว */
+    justify-content: center; /* แบ่งคอนเทนต์ซ้ายขวาและจัดตรงกลาง */
+    align-items: center; /* จัดคอนเทนต์ให้แนวตั้งอยู่ตรงกลาง */
+    width: 100%; /* ให้ครอบคลุมความกว้างทั้งหมด */
+  }
+
+  .home-into,
+  .home-into2 {
+    flex-basis: 90%; /* แต่ละคอนเทนต์ใช้พื้นที่ 48% ของความกว้าง */
+    max-width: 90%; /* จำกัดความกว้างสูงสุดไม่เกิน 48% */
+    margin: 1rem; /* เพิ่มระยะห่างระหว่างคอนเทนต์ */
+    text-align: left; /* จัดข้อความชิดซ้ายในแต่ละบรรทัด */
+
+    /* จัดกล่องเนื้อหาให้อยู่ตรงกลางแนวนอน */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดกลุ่มตัวอักษรให้อยู่กึ่งกลาง */
+  }
+
+  hr {
+    width: 100%; /* ให้เส้น hr ครอบคลุมพื้นที่เต็ม */
+    margin: 2rem 0; /* เพิ่มระยะห่างจากคอนเทนต์ */
+  }
+}
+
+@media (min-width: 711px) {
+  .nav-con {
+    height: 60px;
+  }
+  .logo a {
+    font-size: 1.5rem;
+  }
+  .menu li a {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 22px;
+  }
+  .working-academic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .main-content {
+    display: flex;
+    justify-content: center; /* จัดตรงกลาง */
+    padding: 2rem;
+  }
+
+  .resume-con {
+    display: flex;
+    flex-wrap: wrap; /* ทำให้คอนเทนต์แสดงในหลายแถว */
+    justify-content: center; /* แบ่งคอนเทนต์ซ้ายขวาและจัดตรงกลาง */
+    align-items: center; /* จัดคอนเทนต์ให้แนวตั้งอยู่ตรงกลาง */
+    width: 100%; /* ให้ครอบคลุมความกว้างทั้งหมด */
+  }
+
+  .home-into,
+  .home-into2 {
+    flex-basis: 90%; /* แต่ละคอนเทนต์ใช้พื้นที่ 48% ของความกว้าง */
+    max-width: 90%; /* จำกัดความกว้างสูงสุดไม่เกิน 48% */
+    margin: 1rem; /* เพิ่มระยะห่างระหว่างคอนเทนต์ */
+    text-align: left; /* จัดข้อความชิดซ้ายในแต่ละบรรทัด */
+
+    /* จัดกล่องเนื้อหาให้อยู่ตรงกลางแนวนอน */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดกลุ่มตัวอักษรให้อยู่กึ่งกลาง */
+  }
+
+  hr {
+    width: 100%; /* ให้เส้น hr ครอบคลุมพื้นที่เต็ม */
+    margin: 2rem 0; /* เพิ่มระยะห่างจากคอนเทนต์ */
+  }
+}
+
+@media (min-width: 820px) and (max-width: 1023px) {
+  .home-content {
+    display: flex;
+    /* ใช้ Flexbox สำหรับจัดเรียง */
+    justify-content: space-between;
+    /* เว้นระยะห่างระหว่างสองคอลัมน์ */
+    align-items: center;
+    /* จัดแนวให้ตรงกลางในแนวตั้ง */
+    padding: 0 2rem;
+  }
+
+  .home-into {
+    flex: 1;
+    max-width: 58%;
+    align-items: center;
+    text-align: start;
+  }
+
+  .home-image {
+    flex: 1;
+    max-width: 42%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .home-image img {
+    width: 80%;
+    height: auto;
+  }
+  .working-academic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+  .nav-con {
+    height: 60px;
+  }
+  .logo a {
+    font-size: 1.8rem;
+  }
+  .menu li a {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 2.6rem;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  .card {
+    width: 350px;
+    height: 230px;
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: center; /* จัดตรงกลาง */
+    padding: 2rem;
+  }
+
+  .resume-con {
+    display: flex;
+    flex-wrap: wrap; /* ทำให้คอนเทนต์แสดงในหลายแถว */
+    justify-content: center; /* แบ่งคอนเทนต์ซ้ายขวาและจัดตรงกลาง */
+    align-items: center; /* จัดคอนเทนต์ให้แนวตั้งอยู่ตรงกลาง */
+    width: 100%; /* ให้ครอบคลุมความกว้างทั้งหมด */
+  }
+
+  .home-into,
+  .home-into2 {
+    flex-basis: 90%; /* แต่ละคอนเทนต์ใช้พื้นที่ 48% ของความกว้าง */
+    max-width: 90%; /* จำกัดความกว้างสูงสุดไม่เกิน 48% */
+    margin: 1rem; /* เพิ่มระยะห่างระหว่างคอนเทนต์ */
+    text-align: left; /* จัดข้อความชิดซ้ายในแต่ละบรรทัด */
+
+    /* จัดกล่องเนื้อหาให้อยู่ตรงกลางแนวนอน */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดกลุ่มตัวอักษรให้อยู่กึ่งกลาง */
+  }
+
+  hr {
+    width: 100%; /* ให้เส้น hr ครอบคลุมพื้นที่เต็ม */
+    margin: 2rem 0; /* เพิ่มระยะห่างจากคอนเทนต์ */
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .logo a {
+    font-size: 2rem;
+  }
+
+  .menu li a {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  /* จัดการกับ .main-content */
+  .main-content {
+    display: flex;
+    justify-content: center; /* จัดตรงกลาง */
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
+  .resume-con {
+    display: flex;
+    flex-wrap: wrap; /* ทำให้คอนเทนต์แสดงในหลายแถว */
+    justify-content: space-between; /* แบ่งคอนเทนต์ซ้ายขวา */
+    width: 100%; /* ให้ครอบคลุมความกว้างทั้งหมด */
+  }
+
+  .home-into,
+  .home-into2 {
+    flex-basis: 48%; /* แต่ละคอนเทนต์ใช้พื้นที่ 48% ของความกว้าง */
+    max-width: 48%; /* จำกัดความกว้างสูงสุดไม่เกิน 48% */
+    margin: 1rem 0; /* เพิ่มระยะห่างระหว่างคอนเทนต์ */
+    text-align: start; /* จัดข้อความชิดซ้าย */
+  }
+
+  hr {
+    width: 100%; /* ให้เส้น hr ครอบคลุมพื้นที่เต็ม */
+    margin: 2rem 0; /* เพิ่มระยะห่างจากคอนเทนต์ */
+  }
+}
+
+@media (min-width: 1240px) {
+  .logo a {
+    font-size: 2rem;
+  }
+  .menu li a {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  .home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .home-into {
+    flex: 1;
+    max-width: 50%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .home-image img {
+    width: 80%;
+    height: auto;
+  }
+  .working-academic {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+  .card {
+    width: 370px;
+    height: 250px;
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: center; /* จัดตรงกลาง */
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
+  .resume-con {
+    display: flex;
+    flex-wrap: wrap; /* ทำให้คอนเทนต์แสดงในหลายแถว */
+    justify-content: space-between; /* แบ่งคอนเทนต์ซ้ายขวา */
+    width: 100%; /* ให้ครอบคลุมความกว้างทั้งหมด */
+  }
+
+  .home-into,
+  .home-into2 {
+    flex-basis: 48%; /* แต่ละคอนเทนต์ใช้พื้นที่ 48% ของความกว้าง */
+    max-width: 48%; /* จำกัดความกว้างสูงสุดไม่เกิน 48% */
+    margin: 1rem 0; /* เพิ่มระยะห่างระหว่างคอนเทนต์ */
+    text-align: start; /* จัดข้อความชิดซ้าย */
+  }
+
+  hr {
+    width: 100%; /* ให้เส้น hr ครอบคลุมพื้นที่เต็ม */
+    margin: 2rem 0; /* เพิ่มระยะห่างจากคอนเทนต์ */
+  }
+}
