@@ -1,160 +1,183 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="test.css" />
-    <title>test responsive</title>
-  </head>
 
-  <body>
-    <nav>
-      <div class="container">
-        <div class="nav-con">
-          <div class="logo" onclick="menuExpand()">
-            <a href="#">My Protfolio</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="test.css" />
+  <title>test responsive</title>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <div class="nav-con">
+        <div class="logo" onclick="menuExpand()">
+          <a href="#">My Protfolio</a>
+        </div>
+        <ul class="menu" id="nav-menu">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Working">Working</a></li>
+          <li><a href="#Profile">Profile</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--ส่วนบนสุด(หน้าหลัก)-->
+  <section id="Home">
+    <main class="home-content">
+      <div class="home-into">
+        <h3>นิษฐ์อานัณย์ ทิพนงค์</h3>
+        <p>
+          ยินดีต้อนรับทุกคนเข้าสู่ Portfolio ของผมครับ
+          เว็บไซต์นี้จัดทำขึ้นเพื่อฝึกฝนการสร้างเว็บไซต์ ด้วย HTML CSS
+          Javascript และรวบรวมประวัติส่วนตัว ผลงาน กิจกรรมต่างๆ ที่ผมมี
+          ผ่านการเรียนรู้สิ่งต่างๆ ที่ผ่านมา ขอบคุณทุกคนที่เข้ามารับชมครับ
+        </p>
+        <hr />
+      </div>
+      <div class="home-image">
+        <img id="profile" src="image/profile3.png" />
+      </div>
+    </main>
+  </section>
+
+  <!--ส่วนผลงาน-->
+  <h5>Working</h5>
+  <h6>คลิกรูปภาพเพื่อดูรายละเอียด</h6>
+  <section id="Working">
+    <main class="working-content">
+      <div class="working-academic">
+        <div class="card">
+          <img src="image/รวมภาพใส่พอร์ต/ฝึกงานแอดไวซ์.jpg" />
+          <div class="card__content">
+            <p class="card__title">ฝึกประสบการณ์วิชาชีพ</p>
+            <p class="card__description">
+              ฝึกประสบการณ์วิชาชีพ ณ บริษัทแอดไวซ์ บ้านไร่ จำกัด
+              ในตำแหน่งช่างซ่อมทั่วไป
+            </p>
           </div>
-          <ul class="menu" id="nav-menu">
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Working">Working</a></li>
-            <li><a href="#Profile">Profile</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+        </div>
+
+        <div class="card">
+          <img src="image/รวมภาพใส่พอร์ต/iot.jpg" />
+          <div class="card__content">
+            <p class="card__title">การโปรแกรมระบบ IoT</p>
+            <p class="card__description">
+              เข้าร่วมโครงการการพัฒนาโปรแกรมระบบ IoT ด้วย Arduino IDE
+              กับวิทยากร ผศ. ดอนสัน ปงผาบ
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="image/รวมภาพใส่พอร์ต/พรีเซนต์เซนเซอร์วัดน้ำ.jpg" />
+          <div class="card__content">
+            <p class="card__title">เซนเซอร์วัดระดับน้ำ</p>
+            <p class="card__description">
+              รางวัลชมเชยพิเศษจากกรรมการ
+              ในการแข่งขันประกวดสิ่งประดิษฐ์ทางวิทยาศาสตร์ สัปดาห์วิทยาศาสตร์
+              วิทยาลัยชุมชนอุทัยธานี
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="image/รวมภาพใส่พอร์ต/ประกอบคอม.jpg" />
+          <div class="card__content">
+            <p class="card__title">ทดสอบสมรรถนะแรงงาน ระดับ ปวส.1</p>
+            <p class="card__description">
+              ผ่านการทดสอบสมรรถนะแรงงาน ระดับ ปวส.1 ปีการศึกษา 2567
+              (การประคอมคอมพิวเตอร์, โปรแกรมอรรถประโยชน์พื้นฐาน)
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="image/รวมภาพใส่พอร์ต/ดีเด่น (1).JPG" />
+          <div class="card__content">
+            <p class="card__title">นักศึกษาดีเด่นของวิทยาลัย</p>
+            <p class="card__description">
+              ได้รับเลือกเป็นนักศึกษาดีเด่น ของสาขา เทคโนโลยีสารสนเทศ
+              ปีการศึกษา 2567 จากการได้เกรดเฉลี่ย 4.00
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="image/รวมภาพใส่พอร์ต/พรีเซต์โปรเจก2.jpg" />
+          <div class="card__content">
+            <p class="card__title">โปรเจกต์ IoT</p>
+            <p class="card__description">
+              โครงงานเซนเซอร์ตรวจจับสิ่งกีดขวางเพื่อผู้พิการทางสายตา
+              โครงการนวัตกรรมสิ่งประดิษฐ์ ของคนรุ่นใหม่ ระดับปวช.
+            </p>
+          </div>
         </div>
       </div>
-    </nav>
+    </main>
+  </section>
 
-    <!--ส่วนบนสุด(หน้าหลัก)-->
-    <section id="Home">
-      <main class="home-content">
-        <div class="home-into">
-          <h3>นิษฐ์อานัณย์ ทิพนงค์</h3>
-          <p>
-            ยินดีต้อนรับทุกคนเข้าสู่ Portfolio ของผมครับ
-            เว็บไซต์นี้จัดทำขึ้นเพื่อฝึกฝนการสร้างเว็บไซต์ ด้วย HTML CSS
-            Javascript และรวบรวมประวัติส่วนตัว ผลงาน กิจกรรมต่างๆ ที่ผมมี
-            ผ่านการเรียนรู้สิ่งต่างๆ ที่ผ่านมา ขอบคุณทุกคนที่เข้ามารับชมครับ
-          </p>
-          <hr />
-        </div>
-        <div class="home-image">
-          <img id="profile" src="image/profile3.png" />
-        </div>
-      </main>
-    </section>
-
-    <!--ส่วนผลงาน-->
-    <h5>Working</h5>
-    <h6>คลิกรูปภาพเพื่อดูรายละเอียด</h6>
-    <section id="Working">
-      <main class="working-content">
-        <div class="working-academic">
-          <div class="card">
-            <img src="image/รวมภาพใส่พอร์ต/ฝึกงานแอดไวซ์.jpg" />
-            <div class="card__content">
-              <p class="card__title">ฝึกประสบการณ์วิชาชีพ</p>
-              <p class="card__description">
-                ฝึกประสบการณ์วิชาชีพ ณ บริษัทแอดไวซ์ บ้านไร่ จำกัด
-                ในตำแหน่งช่างซ่อมทั่วไป
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="image/รวมภาพใส่พอร์ต/iot.jpg" />
-            <div class="card__content">
-              <p class="card__title">การโปรแกรมระบบ IoT</p>
-              <p class="card__description">
-                เข้าร่วมโครงการการพัฒนาโปรแกรมระบบ IoT ด้วย Arduino IDE
-                กับวิทยากร ผศ. ดอนสัน ปงผาบ
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="image/รวมภาพใส่พอร์ต/พรีเซนต์เซนเซอร์วัดน้ำ.jpg" />
-            <div class="card__content">
-              <p class="card__title">เซนเซอร์วัดระดับน้ำ</p>
-              <p class="card__description">
-                รางวัลชมเชยพิเศษจากกรรมการ
-                ในการแข่งขันประกวดสิ่งประดิษฐ์ทางวิทยาศาสตร์ สัปดาห์วิทยาศาสตร์
-                วิทยาลัยชุมชนอุทัยธานี
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="image/รวมภาพใส่พอร์ต/ประกอบคอม.jpg" />
-            <div class="card__content">
-              <p class="card__title">ทดสอบสมรรถนะแรงงาน ระดับ ปวส.1</p>
-              <p class="card__description">
-                ผ่านการทดสอบสมรรถนะแรงงาน ระดับ ปวส.1 ปีการศึกษา 2567
-                (การประคอมคอมพิวเตอร์, โปรแกรมอรรถประโยชน์พื้นฐาน)
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="image/รวมภาพใส่พอร์ต/ดีเด่น (1).JPG" />
-            <div class="card__content">
-              <p class="card__title">นักศึกษาดีเด่นของวิทยาลัย</p>
-              <p class="card__description">
-                ได้รับเลือกเป็นนักศึกษาดีเด่น ของสาขา เทคโนโลยีสารสนเทศ
-                ปีการศึกษา 2567 จากการได้เกรดเฉลี่ย 4.00
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="image/รวมภาพใส่พอร์ต/พรีเซต์โปรเจก2.jpg" />
-            <div class="card__content">
-              <p class="card__title">โปรเจกต์ IoT</p>
-              <p class="card__description">
-                โครงงานเซนเซอร์ตรวจจับสิ่งกีดขวางเพื่อผู้พิการทางสายตา
-                โครงการนวัตกรรมสิ่งประดิษฐ์ ของคนรุ่นใหม่ ระดับปวช.
-              </p>
-            </div>
-          </div>
-        </div>
-      </main>
-    </section>
-
-    <!--ส่วนโปรไฟล์(ประวัติส่วนตัว)-->
-    <section id="Profile">
-      <h5>Profile</h5>
-      <div class="sop">
-        <h6 id="sop">About Me</h6>
-        <p id="sop">
-          ปัจจุบัน ผมเป็นนักศึกษาระดับประกาศนียบัตรวิชาชีพชั้นสูง ปีที่ 2
-          สาขาวิชาเทคโนโลยีสารสนเทศ วิทยาลัยชุมชนอุทัยธานีครับ
-        </p>
-        <p id="sop">
-          ตัวผมในตอนที่ยังเด็ก มีจุดเริ่มมาจากความสงสัย ว่าโปรแกรม แอปพลิเคชั่น
-          รวมไปถึงเกมต่างๆ ในคอมพิวเตอร์และในสมาร์ทโฟน มันเกิดขึ้นมาได้อย่างไร
-          มีวิธีการสร้างแบบไหน ทำให้ผมมีความสนใจ
-          และเริ่มศึกษาเกี่ยวกับการเรียนในด้านคอมพิวเตอร์ครับ และด้วยเหตุนี้เอง
-          จึงทำให้ผมได้รู้
-          ว่าเบื้องหน้าที่เป็นเทคโนโลยีสุดล้ำที่เราใช้ในชีวิตประจำวัน
-          ในเบื้องหลังจะต้องมีขั้นตอนการศึกษา ค้นคว้า การลองผิลองถูกมากมาย
-          กว่าจะได้มาซึ่งเทคโนโลยีสักอย่างหนึ่ง ซึ่งผมมองว่ากระบวนการเหล่านั้น
-          เป็นสิ่งที่น่าหลงใหล ท้าทาย และช่วยฝึกฝนให้เราสามารถคิดวิเคราะห์
-          แก้ปัญหาต่างๆ ได้
-          นี่จึงเป็นเหตุผลหนึ่งที่ผมชอบในการเรียนเกี่ยวกับคอมพิวเตอร์
-          และทำให้ผมสร้างเว็บไซต์เล็กๆ แบบนี้ขึ้นมาได้ครับ
-        </p>
-        <div class="btn-content">
-          <button class="btn" ><a href="resume.html">View Resume</a></button>
-        </div>
+  <!--ส่วนโปรไฟล์(ประวัติส่วนตัว)-->
+  <section id="Profile">
+    <h5>Profile</h5>
+    <div class="sop">
+      <h6 id="sop">About Me</h6>
+      <p id="sop">
+        ปัจจุบัน ผมเป็นนักศึกษาระดับประกาศนียบัตรวิชาชีพชั้นสูง ปีที่ 2
+        สาขาวิชาเทคโนโลยีสารสนเทศ วิทยาลัยชุมชนอุทัยธานีครับ
+      </p>
+      <p id="sop">
+        ตัวผมในตอนที่ยังเด็ก มีจุดเริ่มมาจากความสงสัย ว่าโปรแกรม แอปพลิเคชั่น
+        รวมไปถึงเกมต่างๆ ในคอมพิวเตอร์และในสมาร์ทโฟน มันเกิดขึ้นมาได้อย่างไร
+        มีวิธีการสร้างแบบไหน ทำให้ผมมีความสนใจ
+        และเริ่มศึกษาเกี่ยวกับการเรียนในด้านคอมพิวเตอร์ครับ และด้วยเหตุนี้เอง
+        จึงทำให้ผมได้รู้
+        ว่าเบื้องหน้าที่เป็นเทคโนโลยีสุดล้ำที่เราใช้ในชีวิตประจำวัน
+        ในเบื้องหลังจะต้องมีขั้นตอนการศึกษา ค้นคว้า การลองผิลองถูกมากมาย
+        กว่าจะได้มาซึ่งเทคโนโลยีสักอย่างหนึ่ง ซึ่งผมมองว่ากระบวนการเหล่านั้น
+        เป็นสิ่งที่น่าหลงใหล ท้าทาย และช่วยฝึกฝนให้เราสามารถคิดวิเคราะห์
+        แก้ปัญหาต่างๆ ได้
+        นี่จึงเป็นเหตุผลหนึ่งที่ผมชอบในการเรียนเกี่ยวกับคอมพิวเตอร์
+        และทำให้ผมสร้างเว็บไซต์เล็กๆ แบบนี้ขึ้นมาได้ครับ
+      </p>
+      <div class="btn-content">
+        <button class="btn"><a href="resume.html">View Resume</a></button>
       </div>
-    </section>
-  </body>
+    </div>
+    <div class="mygithub">
+      <div class="myqrcode">
+        <img src="image/qrcode_github.com.png" alt="https://github.com/FlamingoP2392">
+      </div>
+      <div class="mystatement">
+        <p>นอกจากผลงานทางทักษะวิชาชีพและทางวิชาการข้างต้น ผมยังมี Repository ของ Github
+          ที่รวบรวมงานที่ผมได้ศึกษาเรียนรู้ด้วยตัวเองในการทำเว็บไซต์ด้วยครับ คลิก --> <a
+            href="https://github.com/FlamingoP2392">My GitHub</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="Contact">
+    <div class="contact-me">
+      <div class="foot-left">
+        <h6>Contact Me</h6>
+        <p>นายนิษฐอานัณย์ ทิพนงค์</p>
+      </div>
+      <div class="foot-right">
+        
+      </div>
+    </div>
+  </section>
+
+
   <script>
     // เมื่อโหลดหน้าเว็บเสร็จ
     window.addEventListener("load", () => {
@@ -182,4 +205,6 @@
       }
     });
   </script>
+</body>
+
 </html>

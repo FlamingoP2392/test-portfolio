@@ -193,13 +193,14 @@ hr {
 }
 
 .sop {
-  background-color: #47c088;
+  background-color: #c5ffe4;
   display: block;
   box-sizing: border-box;
   width: 100%;
   height: inherit;
   padding: 2px;
   margin: 0 auto;
+  margin-bottom: 2%;
 }
 
 
@@ -210,7 +211,7 @@ hr {
 .btn-content a{
   text-decoration: none;
   list-style: none;
-  color:#9effb6;
+  color:#015c16;
 }
 
 .btn {
@@ -237,7 +238,7 @@ hr {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #008956;
+  background-color: #47c088;
   transform: translateX(-100%);
   transition: all 0.3s;
   z-index: -1;
@@ -245,6 +246,46 @@ hr {
 
 .btn:hover::before {
   transform: translateX(0);
+}
+
+.mygithub{
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+
+.myqrcode{
+  display: flex;
+  flex: 1;
+  max-width: 40%;
+  margin-bottom: 2%;
+}
+.myqrcode img{
+  width: 50%;
+  box-sizing: border-box;
+  border: solid 1px #015c16;
+  border-radius: 20px;
+  padding: 2% 3%;
+}
+
+.mystatement{
+  display: flex;
+  flex: 1;
+  box-sizing: border-box;
+  max-width: 60%;
+  text-align: start;
+  text-indent: 10px;
+  padding: 2% 3%;
+}
+.mystatement p{
+  font-size: 1.5rem;
+  color: #015c16;
+}
+.mystatement a{
+  font-size: 1.5rem;
+  color: #015c16;
+  text-decoration: underline;
+  list-style: none;
 }
 
 
