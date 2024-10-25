@@ -9,6 +9,8 @@ body {
   transform: translateY(20px); /* เลื่อนเนื้อหาเล็กน้อยลง */
   transition: opacity 1s ease, transform 3s ease; /* ตั้งค่าการเปลี่ยนแปลง */
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body.visible {
@@ -288,6 +290,197 @@ hr {
   list-style: none;
 }
 
+.contact-me {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* จัดให้แต่ละฝั่งชิดบน */
+  padding: 1rem;
+  background-color: #008956;
+  overflow-x: hidden;
+}
+
+.foot-left{
+  flex: 1;
+  max-width: 35%; /* ปรับให้แต่ละฝั่งใช้พื้นที่ไม่เกิน 45% ของความกว้างรวม */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column; /* จัดเรียงคอนเทนต์ในแนวตั้ง */
+  justify-content: center; /* ให้อยู่กึ่งกลางแนวตั้งของกล่องตัวเอง */
+}
+.foot-right {
+  flex: 1;
+  max-width: 65%; /* ปรับให้แต่ละฝั่งใช้พื้นที่ไม่เกิน 45% ของความกว้างรวม */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column; /* จัดเรียงคอนเทนต์ในแนวตั้ง */
+  justify-content: center; /* ให้อยู่กึ่งกลางแนวตั้งของกล่องตัวเอง */
+}
+.foot-left h6,
+.foot-right h6 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  color: #c5ffe4;
+}
+.foot-left p,
+.foot-right p {
+  font-size: 1.2rem;
+  text-align: start;
+  color: #c5ffe4;
+}
+
+.cardd {
+  max-width: 75%;
+  height: inherit;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 2%;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 1s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #067cdd;
+  transition-duration: 0.3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #d61515;
+  transition-duration: 0.3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #0af531;
+  transition-duration: 0.3s;
+}
+.containerFive:hover {
+  background-color: #38049b;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media(max-width: 320px){
+  .myqrcode img{
+    display: none;
+  }
+  .mystatement{
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+  }
+  .mystatement p{
+    font-size: 0.8rem;
+  }
+  .mystatement a{
+    font-size: 1rem;
+  }
+  .foot-left h6,
+.foot-right h6 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.foot-left p,
+.foot-right p {
+  font-size: 0.8rem;
+  margin: 2% 5%;
+}
+.cardd {
+  flex-direction: column;
+  gap: 10px;
+}
+.socialContainer {
+  width: 35px;
+  height: 35px;
+}
+.foot-left{
+  max-width: 60%;
+}
+.foot-right{
+  max-width: 40%;
+}
+}
+
+@media(max-width: 499px){
+  .myqrcode img{
+    display: none;
+  }
+  .foot-left h6,
+.foot-right h6 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+.foot-left p,
+.foot-right p {
+  font-size: 1rem;
+  margin: 2% 5%;
+}
+.cardd {
+  flex-direction: column;
+  gap: 10px;
+}
+.socialContainer {
+  width: 38px;
+  height: 38px;
+}
+.foot-left{
+  max-width: 60%;
+}
+.foot-right{
+  max-width: 40%;
+}
+}
 
 @media (max-width: 710px) {
   .logo {
@@ -337,6 +530,27 @@ hr {
     font-size: 1rem;
     text-decoration: none;
   }
+
+  .cardd {
+    flex-direction: column; /* เปลี่ยนการจัดเรียงเป็นแนวตั้ง */
+    gap: 15px; /* ลดช่องว่างระหว่างไอคอน */
+  }
+.socialContainer {
+  width: 45px;
+  height: 45px;
+}
+.foot-left{
+  max-width: 60%;
+}
+.foot-right{
+  max-width: 40%;
+}
+.myqrcode img{
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  margin: 5% 5%;
+}
 }
 
 @media (min-width: 600px) and (max-width: 710px) {
@@ -364,6 +578,7 @@ hr {
   p {
     font-size: 20px;
   }
+
 }
 
 @media (min-width: 711px) {
@@ -389,7 +604,34 @@ hr {
     justify-items: center;
     align-items: center;
   }
+  
 }
+
+@media (max-width: 820px) {
+  .cardd {
+    flex-direction: column; /* เปลี่ยนการจัดเรียงเป็นแนวตั้ง */
+    gap: 15px; /* ลดช่องว่างระหว่างไอคอน */
+    width: auto; /* ใช้ auto เพื่อให้ฟิตพอดีกับเนื้อหาจริง */
+    padding: 10px; /* ลด padding */
+  }
+  .socialContainer {
+    width: 48px;
+    height: 48px;
+  }
+  .foot-left{
+    max-width: 60%;
+  }
+  .foot-right{
+    max-width: 40%;
+  }
+  .myqrcode img{
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    margin: 5% 5%;
+  }
+}
+
 
 @media (min-width: 820px) and (max-width: 1023px) {
   .home-content {
@@ -399,7 +641,7 @@ hr {
     /* เว้นระยะห่างระหว่างสองคอลัมน์ */
     align-items: center;
     /* จัดแนวให้ตรงกลางในแนวตั้ง */
-    padding: 0 2rem;
+    padding: 2 2rem;
   }
 
   .home-into {
@@ -446,6 +688,12 @@ hr {
   .card {
     width: 350px;
     height: 230px;
+  }
+  .myqrcode img{
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    margin: 5% 5%;
   }
 }
 

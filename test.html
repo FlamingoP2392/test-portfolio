@@ -1,210 +1,256 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="test.css" />
+    <title>test responsive</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="test.css" />
-  <title>test responsive</title>
-</head>
-
-<body>
-  <nav>
-    <div class="container">
-      <div class="nav-con">
-        <div class="logo" onclick="menuExpand()">
-          <a href="#">My Protfolio</a>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="nav-con">
+          <div class="logo" onclick="menuExpand()">
+            <a href="#">My Protfolio</a>
+          </div>
+          <ul class="menu" id="nav-menu">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Working">Working</a></li>
+            <li><a href="#Profile">Profile</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
         </div>
-        <ul class="menu" id="nav-menu">
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#Working">Working</a></li>
-          <li><a href="#Profile">Profile</a></li>
-          <li><a href="#Contact">Contact</a></li>
-        </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!--ส่วนบนสุด(หน้าหลัก)-->
-  <section id="Home">
-    <main class="home-content">
-      <div class="home-into">
-        <h3>นิษฐ์อานัณย์ ทิพนงค์</h3>
-        <p>
-          ยินดีต้อนรับทุกคนเข้าสู่ Portfolio ของผมครับ
-          เว็บไซต์นี้จัดทำขึ้นเพื่อฝึกฝนการสร้างเว็บไซต์ ด้วย HTML CSS
-          Javascript และรวบรวมประวัติส่วนตัว ผลงาน กิจกรรมต่างๆ ที่ผมมี
-          ผ่านการเรียนรู้สิ่งต่างๆ ที่ผ่านมา ขอบคุณทุกคนที่เข้ามารับชมครับ
+    <!--ส่วนบนสุด(หน้าหลัก)-->
+    <section id="Home">
+      <main class="home-content">
+        <div class="home-into">
+          <h3>นิษฐ์อานัณย์ ทิพนงค์</h3>
+          <p>
+            ยินดีต้อนรับทุกคนเข้าสู่ Portfolio ของผมครับ
+            เว็บไซต์นี้จัดทำขึ้นเพื่อฝึกฝนการสร้างเว็บไซต์ ด้วย HTML CSS
+            Javascript และรวบรวมประวัติส่วนตัว ผลงาน กิจกรรมต่างๆ ที่ผมมี
+            ผ่านการเรียนรู้สิ่งต่างๆ ที่ผ่านมา ขอบคุณทุกคนที่เข้ามารับชมครับ
+          </p>
+          <hr />
+        </div>
+        <div class="home-image">
+          <img id="profile" src="image/profile3.png" />
+        </div>
+      </main>
+    </section>
+
+    <!--ส่วนผลงาน-->
+    <h5>Working</h5>
+    <h6>คลิกรูปภาพเพื่อดูรายละเอียด</h6>
+    <section id="Working">
+      <main class="working-content">
+        <div class="working-academic">
+          <div class="card">
+            <img src="image/รวมภาพใส่พอร์ต/ฝึกงานแอดไวซ์.jpg" />
+            <div class="card__content">
+              <p class="card__title">ฝึกประสบการณ์วิชาชีพ</p>
+              <p class="card__description">
+                ฝึกประสบการณ์วิชาชีพ ณ บริษัทแอดไวซ์ บ้านไร่ จำกัด
+                ในตำแหน่งช่างซ่อมทั่วไป
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="image/รวมภาพใส่พอร์ต/iot.jpg" />
+            <div class="card__content">
+              <p class="card__title">การโปรแกรมระบบ IoT</p>
+              <p class="card__description">
+                เข้าร่วมโครงการการพัฒนาโปรแกรมระบบ IoT ด้วย Arduino IDE
+                กับวิทยากร ผศ. ดอนสัน ปงผาบ
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="image/รวมภาพใส่พอร์ต/พรีเซนต์เซนเซอร์วัดน้ำ.jpg" />
+            <div class="card__content">
+              <p class="card__title">เซนเซอร์วัดระดับน้ำ</p>
+              <p class="card__description">
+                รางวัลชมเชยพิเศษจากกรรมการ
+                ในการแข่งขันประกวดสิ่งประดิษฐ์ทางวิทยาศาสตร์ สัปดาห์วิทยาศาสตร์
+                วิทยาลัยชุมชนอุทัยธานี
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="image/รวมภาพใส่พอร์ต/ประกอบคอม.jpg" />
+            <div class="card__content">
+              <p class="card__title">ทดสอบสมรรถนะแรงงาน ระดับ ปวส.1</p>
+              <p class="card__description">
+                ผ่านการทดสอบสมรรถนะแรงงาน ระดับ ปวส.1 ปีการศึกษา 2567
+                (การประคอมคอมพิวเตอร์, โปรแกรมอรรถประโยชน์พื้นฐาน)
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="image/รวมภาพใส่พอร์ต/ดีเด่น (1).JPG" />
+            <div class="card__content">
+              <p class="card__title">นักศึกษาดีเด่นของวิทยาลัย</p>
+              <p class="card__description">
+                ได้รับเลือกเป็นนักศึกษาดีเด่น ของสาขา เทคโนโลยีสารสนเทศ
+                ปีการศึกษา 2567 จากการได้เกรดเฉลี่ย 4.00
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="image/รวมภาพใส่พอร์ต/พรีเซต์โปรเจก2.jpg" />
+            <div class="card__content">
+              <p class="card__title">โปรเจกต์ IoT</p>
+              <p class="card__description">
+                โครงงานเซนเซอร์ตรวจจับสิ่งกีดขวางเพื่อผู้พิการทางสายตา
+                โครงการนวัตกรรมสิ่งประดิษฐ์ ของคนรุ่นใหม่ ระดับปวช.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!--ส่วนโปรไฟล์(ประวัติส่วนตัว)-->
+    <section id="Profile">
+      <h5>Profile</h5>
+      <div class="sop">
+        <h6 id="sop">About Me</h6>
+        <p id="sop">
+          ปัจจุบัน ผมเป็นนักศึกษาระดับประกาศนียบัตรวิชาชีพชั้นสูง ปีที่ 2
+          สาขาวิชาเทคโนโลยีสารสนเทศ วิทยาลัยชุมชนอุทัยธานีครับ
         </p>
-        <hr />
-      </div>
-      <div class="home-image">
-        <img id="profile" src="image/profile3.png" />
-      </div>
-    </main>
-  </section>
-
-  <!--ส่วนผลงาน-->
-  <h5>Working</h5>
-  <h6>คลิกรูปภาพเพื่อดูรายละเอียด</h6>
-  <section id="Working">
-    <main class="working-content">
-      <div class="working-academic">
-        <div class="card">
-          <img src="image/รวมภาพใส่พอร์ต/ฝึกงานแอดไวซ์.jpg" />
-          <div class="card__content">
-            <p class="card__title">ฝึกประสบการณ์วิชาชีพ</p>
-            <p class="card__description">
-              ฝึกประสบการณ์วิชาชีพ ณ บริษัทแอดไวซ์ บ้านไร่ จำกัด
-              ในตำแหน่งช่างซ่อมทั่วไป
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="image/รวมภาพใส่พอร์ต/iot.jpg" />
-          <div class="card__content">
-            <p class="card__title">การโปรแกรมระบบ IoT</p>
-            <p class="card__description">
-              เข้าร่วมโครงการการพัฒนาโปรแกรมระบบ IoT ด้วย Arduino IDE
-              กับวิทยากร ผศ. ดอนสัน ปงผาบ
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="image/รวมภาพใส่พอร์ต/พรีเซนต์เซนเซอร์วัดน้ำ.jpg" />
-          <div class="card__content">
-            <p class="card__title">เซนเซอร์วัดระดับน้ำ</p>
-            <p class="card__description">
-              รางวัลชมเชยพิเศษจากกรรมการ
-              ในการแข่งขันประกวดสิ่งประดิษฐ์ทางวิทยาศาสตร์ สัปดาห์วิทยาศาสตร์
-              วิทยาลัยชุมชนอุทัยธานี
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="image/รวมภาพใส่พอร์ต/ประกอบคอม.jpg" />
-          <div class="card__content">
-            <p class="card__title">ทดสอบสมรรถนะแรงงาน ระดับ ปวส.1</p>
-            <p class="card__description">
-              ผ่านการทดสอบสมรรถนะแรงงาน ระดับ ปวส.1 ปีการศึกษา 2567
-              (การประคอมคอมพิวเตอร์, โปรแกรมอรรถประโยชน์พื้นฐาน)
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="image/รวมภาพใส่พอร์ต/ดีเด่น (1).JPG" />
-          <div class="card__content">
-            <p class="card__title">นักศึกษาดีเด่นของวิทยาลัย</p>
-            <p class="card__description">
-              ได้รับเลือกเป็นนักศึกษาดีเด่น ของสาขา เทคโนโลยีสารสนเทศ
-              ปีการศึกษา 2567 จากการได้เกรดเฉลี่ย 4.00
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="image/รวมภาพใส่พอร์ต/พรีเซต์โปรเจก2.jpg" />
-          <div class="card__content">
-            <p class="card__title">โปรเจกต์ IoT</p>
-            <p class="card__description">
-              โครงงานเซนเซอร์ตรวจจับสิ่งกีดขวางเพื่อผู้พิการทางสายตา
-              โครงการนวัตกรรมสิ่งประดิษฐ์ ของคนรุ่นใหม่ ระดับปวช.
-            </p>
-          </div>
+        <p id="sop">
+          ตัวผมในตอนที่ยังเด็ก มีจุดเริ่มมาจากความสงสัย ว่าโปรแกรม แอปพลิเคชั่น
+          รวมไปถึงเกมต่างๆ ในคอมพิวเตอร์และในสมาร์ทโฟน มันเกิดขึ้นมาได้อย่างไร
+          มีวิธีการสร้างแบบไหน ทำให้ผมมีความสนใจ
+          และเริ่มศึกษาเกี่ยวกับการเรียนในด้านคอมพิวเตอร์ครับ และด้วยเหตุนี้เอง
+          จึงทำให้ผมได้รู้
+          ว่าเบื้องหน้าที่เป็นเทคโนโลยีสุดล้ำที่เราใช้ในชีวิตประจำวัน
+          ในเบื้องหลังจะต้องมีขั้นตอนการศึกษา ค้นคว้า การลองผิลองถูกมากมาย
+          กว่าจะได้มาซึ่งเทคโนโลยีสักอย่างหนึ่ง ซึ่งผมมองว่ากระบวนการเหล่านั้น
+          เป็นสิ่งที่น่าหลงใหล ท้าทาย และช่วยฝึกฝนให้เราสามารถคิดวิเคราะห์
+          แก้ปัญหาต่างๆ ได้
+          นี่จึงเป็นเหตุผลหนึ่งที่ผมชอบในการเรียนเกี่ยวกับคอมพิวเตอร์
+          และทำให้ผมสร้างเว็บไซต์เล็กๆ แบบนี้ขึ้นมาได้ครับ
+        </p>
+        <div class="btn-content">
+          <button class="btn"><a href="resume.html">View Resume</a></button>
         </div>
       </div>
-    </main>
-  </section>
-
-  <!--ส่วนโปรไฟล์(ประวัติส่วนตัว)-->
-  <section id="Profile">
-    <h5>Profile</h5>
-    <div class="sop">
-      <h6 id="sop">About Me</h6>
-      <p id="sop">
-        ปัจจุบัน ผมเป็นนักศึกษาระดับประกาศนียบัตรวิชาชีพชั้นสูง ปีที่ 2
-        สาขาวิชาเทคโนโลยีสารสนเทศ วิทยาลัยชุมชนอุทัยธานีครับ
-      </p>
-      <p id="sop">
-        ตัวผมในตอนที่ยังเด็ก มีจุดเริ่มมาจากความสงสัย ว่าโปรแกรม แอปพลิเคชั่น
-        รวมไปถึงเกมต่างๆ ในคอมพิวเตอร์และในสมาร์ทโฟน มันเกิดขึ้นมาได้อย่างไร
-        มีวิธีการสร้างแบบไหน ทำให้ผมมีความสนใจ
-        และเริ่มศึกษาเกี่ยวกับการเรียนในด้านคอมพิวเตอร์ครับ และด้วยเหตุนี้เอง
-        จึงทำให้ผมได้รู้
-        ว่าเบื้องหน้าที่เป็นเทคโนโลยีสุดล้ำที่เราใช้ในชีวิตประจำวัน
-        ในเบื้องหลังจะต้องมีขั้นตอนการศึกษา ค้นคว้า การลองผิลองถูกมากมาย
-        กว่าจะได้มาซึ่งเทคโนโลยีสักอย่างหนึ่ง ซึ่งผมมองว่ากระบวนการเหล่านั้น
-        เป็นสิ่งที่น่าหลงใหล ท้าทาย และช่วยฝึกฝนให้เราสามารถคิดวิเคราะห์
-        แก้ปัญหาต่างๆ ได้
-        นี่จึงเป็นเหตุผลหนึ่งที่ผมชอบในการเรียนเกี่ยวกับคอมพิวเตอร์
-        และทำให้ผมสร้างเว็บไซต์เล็กๆ แบบนี้ขึ้นมาได้ครับ
-      </p>
-      <div class="btn-content">
-        <button class="btn"><a href="resume.html">View Resume</a></button>
+      <div class="mygithub">
+        <div class="myqrcode">
+          <img
+            src="image/qrcode_github.com.png"
+            alt="https://github.com/FlamingoP2392"
+          />
+        </div>
+        <div class="mystatement">
+          <p>
+            นอกจากผลงานทางทักษะวิชาชีพและทางวิชาการข้างต้น ผมยังมี Repository
+            ของ Github
+            ที่รวบรวมงานที่ผมได้ศึกษาเรียนรู้ด้วยตัวเองในการทำเว็บไซต์ด้วยครับ
+            คลิก --> <a href="https://github.com/FlamingoP2392">My GitHub</a>
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="mygithub">
-      <div class="myqrcode">
-        <img src="image/qrcode_github.com.png" alt="https://github.com/FlamingoP2392">
+    </section>
+
+    <section id="Contact">
+      <div class="contact-me">
+        <div class="foot-left">
+          <h6>Contact Me</h6>
+          <p>
+            นายนิษฐ์อานัณย์ ทิพนงค์<br />60 หมู่ 1 ตำบลห้วยแห้ง อำเภอบ้านไร่
+            <br />จังหวัดอุทัยธานี 61140 <br />โทร : 088 272 5395<br> E-Mail : pinping2392@gmail.com
+          </p>
+        </div>
+        <div class="foot-right">
+          <h6>Sochial Media</h6>
+          <div class="cardd">
+            <a
+              class="socialContainer containerThree"
+              href="mailto:pinping2392@gmail.com?subject=Contact Me!"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="#FFFFFF" d="M12 13.065L2.225 6.196c-.15-.102-.225-.272-.225-.451V5.25c0-.415.336-.75.75-.75h18.5c.414 0 .75.335.75.75v.495c0 .179-.075.349-.225.451L12 13.065zm0 1.11l8.25-5.724v8.354c0 .414-.336.75-.75.75H4.5a.749.749 0 01-.75-.75v-8.354L12 14.175z"/>
+            </svg>
+            
+            </a>
+
+            <a
+              class="socialContainer containerTwo"
+              href="https://www.facebook.com/profile.php?id=100008052465089"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path
+                  fill="#FFFFFF"
+                  d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.406.593 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.463.099 2.794.143v3.24h-1.918c-1.504 0-1.797.715-1.797 1.764v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.325-.594 1.325-1.326V1.326C24 .593 23.406 0 22.675 0z"
+                />
+              </svg>
+            </a>
+
+            <a
+              class="socialContainer containerOne"
+              href="https://www.instagram.com/flamingop_04/"
+            >
+              <svg viewBox="0 0 16 16" class="socialSvg instagramSvg">
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                ></path>
+              </svg>
+            </a>
+
+            <a
+              class="socialContainer containerFive"
+              href="https://github.com/FlamingoP2392"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#fff"
+                height="1em"
+                viewBox="0 0 496 512"
+              >
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                ></path>
+              </svg>
+            </a>
+
+            <a
+              class="socialContainer containerFour"
+              href="https://line.me/ti/p/I5qrVN5m_F"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="#fff" d="M12 2C6.477 2 2 6.044 2 11.027c0 4.32 3.656 7.935 8.49 8.897.33.07.778.216.89.495.102.252.067.645.033.896 0 0-.118.722-.15.877-.05.251-.199.982.86.536 1.049-.445 5.658-3.33 7.708-5.705C20.741 14.872 22 13.098 22 11.027 22 6.044 17.523 2 12 2zm-1.237 11.201H9.39v-3.08h1.372v3.08zm-.714-3.896H9.39v-.927h1.372v.927zm3.936 3.896h-1.354V9.92c0-.138-.115-.247-.256-.247h-1.373V8.682h1.373c.426 0 .772.358.772.79v2.675h1.354v1.054zm3.459 0h-1.4V9.867c0-.14-.115-.254-.256-.254h-1.348v-1.04h1.348c.426 0 .772.359.772.794v3.834z"/>
+            </svg>
+            
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="mystatement">
-        <p>นอกจากผลงานทางทักษะวิชาชีพและทางวิชาการข้างต้น ผมยังมี Repository ของ Github
-          ที่รวบรวมงานที่ผมได้ศึกษาเรียนรู้ด้วยตัวเองในการทำเว็บไซต์ด้วยครับ คลิก --> <a
-            href="https://github.com/FlamingoP2392">My GitHub</a></p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="Contact">
-    <div class="contact-me">
-      <div class="foot-left">
-        <h6>Contact Me</h6>
-        <p>นายนิษฐอานัณย์ ทิพนงค์</p>
-      </div>
-      <div class="foot-right">
-        
-      </div>
-    </div>
-  </section>
-
-
-  <script>
-    // เมื่อโหลดหน้าเว็บเสร็จ
-    window.addEventListener("load", () => {
-      document.body.classList.add("visible");
-    });
-
-    //เปิดแถบเมนูสำหรับ Responsive
-    const menuExpand = () => {
-      const menuList = document.getElementById("nav-menu");
-      if (menuList.className === "menu") {
-        menuList.className += " menu-display";
-      } else {
-        menuList.className = "menu";
-      }
-    };
-
-    // ปิดเมนูเมื่อคลิกส่วนว่าง
-    document.addEventListener("click", (event) => {
-      const menuList = document.getElementById("nav-menu");
-      const logo = document.querySelector(".logo");
-
-      // เช็คว่าคลิกที่เมนูหรือโลโก้หรือไม่
-      if (!menuList.contains(event.target) && !logo.contains(event.target)) {
-        menuList.className = "menu"; // ปิดเมนู
-      }
-    });
-  </script>
-</body>
-
+    <script src="port.js"></script>
+  </body>
 </html>
